@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial scale=1">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+
+</style>
+
+</head>
+<body style="background-image:url(../static/images/building-2.jpg)">
+{% block sidebar %}
+	
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-full" style="background-color: #000000">
+	
+
+	
+		<div class="container-fluid" > 
+			<!--LOGO-->
+			<div class="navbar-header">
+				
+				<a href="#" class="navbar-brand">A FOR ASSISSTANT</a>
+			</div>
+		
+			<!--MenuItems-->
+			<div...........>
+				<ul class="navbar-nav">
+					<li class="active"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'maintenance' %}">Maintenance</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'complaints' %}">Complaints</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'notices' %}">Notices</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">Fire Alarm</a></li>
+
+				</ul> 
+			</div>
+				
+		</div>
+
+	</nav>
+{% endblock %}
+ {% block content %}
+	 	
+	 		<!--<header class="masthead text-center text-white d-flex" style="opacity:0.5; background-color:black">
+      			<div class="container my-auto" >
+		        <div class="row">
+		          <div class="col-lg-10 mx-auto">
+		            <h1 class="text-uppercase">
+		              <strong>A for Assisstant</strong>
+		            </h1>
+		            <hr>
+		          </div>
+		          <div class="col-lg-8 mx-auto">
+		            <p class="text-faded mb-5" style="color:white">A for Assisstant is a web based managment tool for your co-operative housing society. A for Assitant offers you hassle-free platform to transform your society, making it highly functional and easily manageable.</p>
+		            <h3>The Crysler has the following records count</h3>
+		            <div class="col-lg-3 mx-auto">
+		            
+		            <ul>
+    						<li style="color:white; font-family:helvetica;"><strong>Members:</strong> {{ num_members }}</li>
+    						<li style="color:white; font-family:helvetica;"><strong>Notices:</strong> {{ num_notices }}</li>
+   							<li style="color:white; font-family:helvetica;"><strong>Rent:</strong> {{ num_tenants }}</li>
+						    <li style="color:white; font-family:helvetica;"><strong>Complaints:</strong> {{ num_complaints }}</li>
+  						</ul></p>
+  						</div>
+		            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Login</a>
+							          
+		          </div>
+		        </div>
+		      </div>
+		    </header>-->
+<header class="masthead text-center text-white d-flex">		  
+	<div class="container-fluid" > 
+
+			
+			<div class="row">
+				<div class="col-12" style="opacity:0.65; background-color:black">
+				
+					<h1 style="color:white; font-family:helvetica;"><center>A FOR ASSISSTANT</center></h1>
+					<p style="color:white; font-family:helvetica; font-size:20px;">A for Assisstant is a web based managment tool for your co-operative housing society.</p>
+					<p style="color:white; font-family:helvetica; font-size:20px;"> A for Assitant offers you hassle-free platform to transform your society, making it highly functional and easily manageable.</p>
+					<p style="color:white; font-family:helvetica; font-size:20px;"> Developed by a team of 2 highly ambitious students, this software enables even a newcomer to participate in the management process</p>
+				
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12" style="opacity:0.65; background-color:white">
+					<h1 style="color:black; font-family:helvetica;"><strong>The Chrysler Building</strong></h1>
+					<h4 style="color:black; font-family:helvetica;"><strong>The Chrysler Building has the following record counts:</strong></h4>
+	  						
+		  						<ul style="display: inline-block;">
+		    						<li style="color:black; font-family:helvetica; font-size:20px; opacity=1;"><strong>Members:</strong> {{ num_members }}</li>
+		    						<li style="color:black; font-family:helvetica; font-size:20px;"><strong>Notices:</strong> {{ num_notices }}</li>
+		   							<li style="color:black; font-family:helvetica; font-size:20px;"><strong>Rent:</strong> {{ num_tenants }}</li>
+								    <li style="color:black; font-family:helvetica; font-size:20px;"><strong>Complaints:</strong> {{ num_complaints }}</li>
+		  						</ul>
+	  					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-5 text-center mb-4">
+	        		  <br>
+	        		  <img class="rounded-circle img-fluid d-block mx-auto" src="../static/images/chairman.jpg" alt="" style="width:200px;height:200px;">
+	        		  <h3>Chairman
+	         	 	  <small>- Admin</small>
+	         	 	  </h3>
+	        		 <kbd>The chairman has all the rights to the website.</kbd>
+						
+				</div>  
+				
+				<div class="col-2 text-center mb-4">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					{% if user.is_authenticated %}
+						<a class="btn btn-primary btn-xl js-scroll-trigger" href=" {% url 'admin:logout' %} ">Logout</a>
+					{% else %}
+						<a class="btn btn-primary btn-xl js-scroll-trigger" href="{% url 'admin:index' %}">Login</a>        
+					{% endif %}        
+	        	</div>
+	        	<div class="col-5 text-center mb-4">
+	        		  <br>
+	        		  <img class="rounded-circle img-fluid d-block mx-auto" src="../static/images/user.jpg" alt="" style="width:200px;height:200px;">
+	        		  <h3>Members
+	            	  <small>- User</small>
+	          		  </h3>
+	         	      <kbd>The user has user rights which are decided by chairman.</kbd>
+	        	</div>
+	        </div>
+	</div>
+ {% endblock %}
+
+
+
+</body>
+
+</html>
+

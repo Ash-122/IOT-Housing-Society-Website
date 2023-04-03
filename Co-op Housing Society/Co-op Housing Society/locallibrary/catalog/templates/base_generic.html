@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial scale=1">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+
+</head>
+<body style="background-image:url(../static/images/building-2.jpg)">
+{% block sidebar %}
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+	
+		<div class="container-fluid" > 
+			<!--LOGO-->
+			<div class="navbar-header">
+				
+				<a href="#" class="navbar-brand">A FOR ASSISSTANT</a>
+			</div>
+		
+			<!--MenuItems-->
+			<div...........>
+				<ul class="navbar-nav">
+					<li class="active"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Maintenance</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'complaints' %}">Complaints</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Notices</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">Fire Alarm</a></li>
+
+				</ul> 
+			</div>
+				
+		</div>
+
+	</nav>
+{% endblock %}
+ {% block content %}
+	<div class="container-fluid" > 
+
+			<!--<h1><center>A for Assisstant</center></h1>
+			<img src="images/abc.jpg">-->
+			<div class="row">
+				<div class="col-8" style="opacity:0.65; background-color:#4B0082"><h1 style="color:white; font-family:helvetica;">The Chrysler Building</h1>
+				<p style="color:white; font-family:helvetica; font-size:20px;">The Chrysler Building was established in 2010.</p>
+				<p style="color:white; font-family:helvetica; font-size:20px;">It has been developed by Flatiron builders who are renowned for many building many great building including the One57, which is the New York's second most luxrious building.</p> 
+				<p style="color:white; font-family:helvetica; font-size:20px;">To enquire about buying a flat, please leave us a message.</p>	
+				<!--<p><img src="./static/images/icon.jpg"/></p>-->
+				</div>
+				<div class="col-4" style="opacity:0.8; background-color:#2F4F4F">
+					  <h3 style="color:black; font-family:helvetica;">The Society has the following record counts:</h3>
+  						<ul>
+    						<li style="color:black; font-family:helvetica;"><strong>Members:</strong> {{ num_members }}</li>
+    						<li style="color:black; font-family:helvetica;"><strong>Notices:</strong> {{ num_notices }}</li>
+   							<li style="color:black; font-family:helvetica;"><strong>Rent:</strong> {{ num_tenants }}</li>
+						    <li style="color:black; font-family:helvetica;"><strong>Complaints:</strong> {{ num_complaints }}</li>
+  						</ul>
+				</div>
+			</div>
+			
+</div>
+ {% endblock %}
+
+
+
+</body>
+
+</html>
